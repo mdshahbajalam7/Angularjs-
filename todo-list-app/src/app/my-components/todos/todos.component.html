@@ -1,6 +1,7 @@
-<p>todos works!</p>
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro debitis nulla
-  ipsam ut et quo ullam libero, quibusdam hic? Molestiae quisquam iusto
-  blanditiis et ratione aspernatur cupiditate reprehenderit corporis asperiores!
-</p>
+<div *ngFor="let todo of todos">
+  <!-- <li>{{ todo.title }}</li>
+  <li>{{ todo.desc }}</li>
+  <li>{{ todo.active }}</li> -->
+  <!-- <app-todo-item [todo]="todo"></app-todo-item -->
+    <app-todo-item [todo]="todo"></app-todo-item>
+</div>
