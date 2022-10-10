@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>ES6 Class</h1>
+  </body>
+</html>
+<script>
+  // function person(n,a){
+  //     this.name=n;
+  //     this.age=a;
+  // }
+  // person.prototype.city="Mumbai"
+  // const per1 = new person("Md Shahbaj Alam",22)
+  // console.log(per1);
+
+  class person {
+    constructor(n, a) {
+      this.name = n;
+      this.age = a;
+    }
+    shoname() {
+      console.log(this.name);
+    }
+  }
+  const per1 = new person("Md Shahbaj Alam", 22);
+  console.log(per1);
+  per1.shoname();
+
+//   incheritance in ES6 class
+class student extends person{
+    constructor(n, a) {
+      super(n,a)   //just link a constructor function
+      this.role= "students"
+    }
+}
+const per2 = new student("Md Shahbaj Alam", 22);
+console.log("per2",per2);
+</script>
