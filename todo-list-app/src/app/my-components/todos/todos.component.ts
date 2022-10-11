@@ -6,17 +6,17 @@ import { Todo } from "../../Todo"
   styleUrls: ['./todos.component.css']
 })
 export class TodosComponent implements OnInit {
-  getlocalitem:string 
+  getlocalitem: string
   todos: Todo[]
   constructor() {
-   this.getlocalitem = localStorage.getItem("todos")
-    if(this.getlocalitem===null){
+    this.getlocalitem = localStorage.getItem("todos")
+    if (this.getlocalitem === null) {
       this.todos = []
     }
-    else{
-      this.todos=JSON.parse(this.getlocalitem)
+    else {
+      this.todos = JSON.parse(this.getlocalitem)
     }
-    
+
   }
 
   ngOnInit(): void {
@@ -25,12 +25,18 @@ export class TodosComponent implements OnInit {
     console.log(todo)
     const index = this.todos.indexOf(todo)
     this.todos.splice(index, 1)
-    localStorage.setItem("todos",JSON.stringify(this.todos))
+    localStorage.setItem("todos", JSON.stringify(this.todos))
   }
   addTodo(todo: Todo) {
     console.log(todo)
     this.todos.push(todo)
-    localStorage.setItem("todos",JSON.stringify(this.todos))
+    localStorage.setItem("todos", JSON.stringify(this.todos))
+  }
+  // onCheckboxClick
+  toggletodo(todo: Todo) {
+    const index = this.todos.indexOf(todo)
+    this.todos[index].active = !this.todos[index].active 
+    localStorage.setItem("todos", JSON.stringify(this.todos))
   }
 
 }
