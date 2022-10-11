@@ -1,0 +1,28 @@
+.container{
+    border-radius: 10px;
+    /* width: 95%;/ */
+    padding: 5px;
+    margin: auto;
+    margin: 10px 10px;
+    background-color: antiquewhite;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-between;
+}
+.innercontainer{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-top: 20px;
+    text-decoration: none;
+}
+h3{
+    font-weight: 500;
+    font-size: 25px;
+}
+.link{
+    font-weight: 500;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}

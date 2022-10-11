@@ -1,0 +1,24 @@
+{
+  "emplyes_Details": [
+    {
+      "id": 1,
+      "name": "Md shahbaja alam",
+      "age": 29,
+      "gender": "Male",
+      "email": "mdshahbajalam38@gmail.com",
+      "MobileNumber": 7004547417,
+      "Developer": "MERN Stack",
+      "salari": "55000"
+    },
+    {
+      "name": "Guddu ali",
+      "age": "25",
+      "gender": "Male",
+      "email": "gudduali56@gmail.com",
+      "MobileNumber": "7894561230",
+      "Developer": "Backend",
+      "Salari": "41666",
+      "id": 2
+    }
+  ]
+}
