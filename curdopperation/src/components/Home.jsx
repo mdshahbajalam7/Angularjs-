@@ -6,11 +6,11 @@ import { BaseUrl } from "../App";
 // let baseUrl = "http://localhost:8080";
 function Home() {
   const [getdata, setGetdata] = useState([]);
+  const [loadding,setloadding]=useState(false)
   //   get data here
   useEffect(() => {
     // http://localhost:8080/emplyes_Details
     axios
-
       .get(`${BaseUrl}/emplyes_Details`)
       .then(({ data }) => {
         console.log("getdata", data);

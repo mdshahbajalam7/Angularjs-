@@ -1,8 +1,10 @@
 import axios from "axios";
 import React from "react";
-import { IconName } from "react-icons/bs";
-import { useNavigate, useParams } from "react-router-dom";
+// import { IconName } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
+import { BaseUrl } from "../App";
 import styles from "../components/data.module.css";
+import Editpage from "./Editpage";
 
 function Carddata({
   name,
@@ -12,19 +14,21 @@ function Carddata({
   email,
   MobileNumber,
   Developer,
-  Salari,
+  Salary,
 }) {
-  
-    const navigate = useNavigate()
-    const deleteempolyess = (id) => {
+  const navigate = useNavigate();
+  const deleteempolyess = (id) => {
     axios
-      .delete(`http://localhost:8080/emplyes_Details/${id}`)
+      .delete(`${BaseUrl}/emplyes_Details/${id}`)
       .then(({ data }) => {
-        navigate("/")
+        // window.reload(navigate("/")
       })
       .catch((err) => {
         console.log(err);
       });
+  };
+  const Editpage = (id) => {
+    navigate(`/edit/${id}`);
   };
 
   return (
@@ -48,11 +52,13 @@ function Carddata({
         <span style={{ color: "Teal" }}>Developer</span> :- {Developer}
       </h4>
       <h4>
-        <span style={{ color: "Teal" }}>Salari</span> :- {Salari}
+        <span style={{ color: "Teal" }}>Salary</span> :- {Salary}
       </h4>
-      <button className={styles.btn1}>Edit</button>
+      <button className={styles.btn1} onClick={() => Editpage(id)}>
+        Edit
+      </button>
       {/* <BsFillTrashFill/> */}
-      <button className={styles.btn1} onClick={()=>deleteempolyess(id)}>
+      <button className={styles.btn1} onClick={() => deleteempolyess(id)}>
         Delete
       </button>
     </div>

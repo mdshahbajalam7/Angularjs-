@@ -24,14 +24,16 @@ function Empolyes() {
     axios
       .post(`${BaseUrl}/emplyes_Details`, form)
       .then(({ data }) => {
+       
         setTimeout(() => {
           navigate("/");
         }, 5000);
         toast.success("Empilyes details create sucessfully");
+      
         console.log(data);
       })
       .catch((err) => console.log(err));
-    navigate("/");
+    // navigate("/");
   };
 
   return (
@@ -104,9 +106,9 @@ function Empolyes() {
             style={{ marginTop: "10px", width: "100%" }}
             type="number"
             id="outlined-basic"
-            label="Salari"
+            label="Salary"
             required
-            name="Salari"
+            name="Salary"
             variant="outlined"
             onChange={handlechange}
           />
