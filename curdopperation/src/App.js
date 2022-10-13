@@ -1,12 +1,12 @@
 import "./App.css";
-import Todo from "./components/Todo";
+// import Todo from "./components/Todo";
 import MainRouter from "./Mainrouter/MainRouter";
-export const BaseUrl = "http://localhost:8080"
+export const BaseUrl = "https://mini-server5.herokuapp.com/api"
 function App() {
   return (
     <div className="App">
       <MainRouter />
-      <Todo/>
+      {/* <Todo/> */}
     </div>
   );
 }

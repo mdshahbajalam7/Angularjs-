@@ -9,7 +9,6 @@ import { BaseUrl } from "../App";
 import styles from "../components/data.module.css";
 
 function Editpage() {
-  // const [Data,setdata]=useState({})
   const [name, setname] = useState("");
   const [age, setAge] = useState("");
   const [gender, setGender] = useState("");
@@ -18,16 +17,15 @@ function Editpage() {
   const [Developer, setDeveloper] = useState("");
   const [Salary, setSalary] = useState("");
   const { id } = useParams();
-//   console.log(id);
-const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
       .get(`${BaseUrl}/emplyes_Details`)
       .then(({ data }) => {
-        console.log(data);
+        // console.log(data);
+        // data filter haer
         let filterdata = data.filter((elem) => elem.id == id);
-        // setdata(filterdata[0])
         setname(filterdata[0].name);
         setAge(filterdata[0].age);
         setGender(filterdata[0].gender);
@@ -35,7 +33,7 @@ const navigate = useNavigate()
         setMobileNumber(filterdata[0].MobileNumber);
         setDeveloper(filterdata[0].Developer);
         setSalary(filterdata[0].Salary);
-        console.log("filterdata", filterdata[0]);
+        // console.log("filterdata", filterdata[0]);
       })
       .catch((err) => {
         console.log(err);
@@ -59,7 +57,7 @@ const navigate = useNavigate()
       .then(({ data }) => {
         console.log("data", data);
         setTimeout(() => {
-            navigate("/")
+          navigate("/");
         }, 5000);
         toast.success("Empilyes details update sucessfully");
       })

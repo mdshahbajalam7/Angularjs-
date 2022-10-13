@@ -4,8 +4,8 @@ import styles from "../components/data.module.css";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { BaseUrl } from "../App";
 
 function Empolyes() {
@@ -24,12 +24,11 @@ function Empolyes() {
     axios
       .post(`${BaseUrl}/emplyes_Details`, form)
       .then(({ data }) => {
-       
         setTimeout(() => {
           navigate("/");
         }, 5000);
         toast.success("Empilyes details create sucessfully");
-      
+
         console.log(data);
       })
       .catch((err) => console.log(err));

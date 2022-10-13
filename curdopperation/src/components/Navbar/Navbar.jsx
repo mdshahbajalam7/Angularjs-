@@ -13,17 +13,17 @@ function Navbar() {
         <Link className={styles.link} to="/">
           Home
         </Link>
-        <Link className={styles.link} to="/">
+        <Link className={styles.link} to="/about">
           About
         </Link>
         <Link className={styles.link} to="/empolyes">
           Empolyes
         </Link>
-        <Link className={styles.link} to="/">
+        <Link className={styles.link} to="/login">
           Login
         </Link>
-        <Link className={styles.link} to="/">
-          Service
+        <Link className={styles.link} to="/signup">
+          SignUp
         </Link>
       </div>
     </div>

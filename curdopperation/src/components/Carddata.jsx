@@ -1,10 +1,11 @@
 import axios from "axios";
 import React from "react";
+import { IconName, BiTrash, BiEditAlt } from "react-icons/bi";
 // import { IconName } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 import { BaseUrl } from "../App";
 import styles from "../components/data.module.css";
-import Editpage from "./Editpage";
 
 function Carddata({
   name,
@@ -15,13 +16,20 @@ function Carddata({
   MobileNumber,
   Developer,
   Salary,
+  getDataget,
 }) {
   const navigate = useNavigate();
   const deleteempolyess = (id) => {
     axios
       .delete(`${BaseUrl}/emplyes_Details/${id}`)
       .then(({ data }) => {
-        // window.reload(navigate("/")
+        console.log(data);
+        setTimeout(() => {
+          getDataget();
+        }, 5000);
+        toast.error("Empolyess Details Delete successfully !", {
+          position: toast.POSITION.TOP_CENTER,
+        });
       })
       .catch((err) => {
         console.log(err);
@@ -55,12 +63,16 @@ function Carddata({
         <span style={{ color: "Teal" }}>Salary</span> :- {Salary}
       </h4>
       <button className={styles.btn1} onClick={() => Editpage(id)}>
-        Edit
+        <h1>
+          <BiEditAlt />
+        </h1>
       </button>
-      {/* <BsFillTrashFill/> */}
       <button className={styles.btn1} onClick={() => deleteempolyess(id)}>
-        Delete
+        <h1>
+          <BiTrash />
+        </h1>
       </button>
+      <ToastContainer />
     </div>
   );
 }
