@@ -1,13 +1,15 @@
 # Angularjs-
 ## Curd operation with react.js
+<li>Netlify Link:- curdoperationwithreact.netlify.app</li>
+
 ## Class function 
 ## Infinity Scroll bar 
 ## Todo list app With angular.js
-<li>Netlify Link = https://angulartodoapp1.netlify.app</li>
+<li>Netlify Link:- https://angulartodoapp1.netlify.app</li>
 
-## toggle app 
+## Toggle app 
 <Li>
-toggle drak mood and light mood
+Toggle drak mood and light mood
 </li>
 <Li>
 Input Focuse
