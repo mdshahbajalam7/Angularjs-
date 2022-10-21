@@ -1,6 +1,6 @@
 # Angularjs-
 ## Curd operation with react.js
-<li>Netlify Link:- curdoperationwithreact.netlify.app</li>
+<li>Netlify Link:- https://curdoperationwithreact.netlify.app/</li>
 
 ## Class function 
 ## Infinity Scroll bar 
