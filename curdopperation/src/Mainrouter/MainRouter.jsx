@@ -11,6 +11,7 @@ import Signup from '../components/Signup'
 function MainRouter() {
   return (
     <div>
+      
         <Navbar/>
         <Routes>
           <Route path='/' element={<Home/>} />
