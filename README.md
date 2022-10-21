@@ -3,6 +3,8 @@
 ## Class function 
 ## Infinity Scroll bar 
 ## Todo list app With angular.js
+<li>Netlify Link = https://angulartodoapp1.netlify.app</li>
+
 ## toggle app 
 <Li>
 toggle drak mood and light mood
