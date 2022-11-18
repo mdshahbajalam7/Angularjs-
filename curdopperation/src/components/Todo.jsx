@@ -15,7 +15,7 @@ function Todo() {
   return (
     <div>
       <input
-        style={{ border: "2px solid", borderRadius: "5px" }}
+        type="text"
         value={text}
         placeholder="Todo"
         onChange={(e) => settext(e.target.value)}
