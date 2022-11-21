@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <MainRouter />
       {/* <Todo/> */}
-      <TodoList/>
+      {/* <TodoList/> */}
     </div>
   );
 }
