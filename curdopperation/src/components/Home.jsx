@@ -37,7 +37,7 @@ function Home() {
             <CircularProgress color="success" />
           </h1>
         ) : getdata.length === 0 ? (
-          <h1 style={{ textAlign: "center",color:"red" }}>No data....</h1>
+          <h1 style={{ textAlign: "center", color: "red" }}>No data....</h1>
         ) : (
           getdata.map((elem) => {
             return <Carddata key={elem.id} {...elem} getDataget={getDataget} />;

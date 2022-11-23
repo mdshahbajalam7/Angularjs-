@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function TodoList() {
-    const [toggle,setToggle]=useState(false)
+  const [toggle, setToggle] = useState(false);
   const [task, setTask] = useState("");
   const [agetask, setagetask] = useState("");
   const [TodoList, setTodoList] = useState([]);
@@ -10,9 +10,9 @@ function TodoList() {
     setTask(e.target.value);
     // setagetask(e.target.value);
   };
-  const handlechangeAGE = (e)=>{
+  const handlechangeAGE = (e) => {
     setagetask(e.target.value);
-  }
+  };
   const handleclick = () => {
     setTodoList([...TodoList, task, agetask]);
   };
@@ -31,11 +31,11 @@ function TodoList() {
         onChange={handlechangeAGE}
       />
       <button onClick={handleclick}>Add Task</button>
-      {TodoList.map((elem)=>{
-        return <h1>{elem}</h1>
+      {TodoList.map((elem) => {
+        return <h1>{elem}</h1>;
       })}
-      <button onClick={()=>setToggle(!toggle)}>
-        {toggle ? "Dark" :"light"}
+      <button onClick={() => setToggle(!toggle)}>
+        {toggle ? "Dark" : "light"}
       </button>
     </div>
   );
