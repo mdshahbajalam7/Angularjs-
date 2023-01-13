@@ -8,7 +8,6 @@ function TodoList() {
 
   const handlechange = (e) => {
     setTask(e.target.value);
-    // setagetask(e.target.value);
   };
   const handlechangeAGE = (e) => {
     setagetask(e.target.value);
