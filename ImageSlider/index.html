@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 97vh;
+        background-color: gray;
+      }
+      #main-wapper {
+        display: flex;
+      }
+      img {
+        width: 550px;
+        height: 555px;
+        border-radius: 10px;
+        padding: 10px 10px 10px 10px;
+        box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.75);
+      }
+
+      .row {
+        display: flex;
+        width: 120px;
+        height: 120px;
+        flex-flow: column;
+        margin-left: 10px;
+        margin-bottom: 5px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main-wapper">
+      <img name="slider" />
+      <section class="imgRow">
+        <img
+          class="row"
+          src="https://images.unsplash.com/photo-1674050287685-22af5e6226b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDF8Q0R3dXdYSkFiRXd8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+          alt=""
+        />
+        <img
+          class="row"
+          src="https://images.unsplash.com/photo-1674050055855-e840f2c5db31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDV8Q0R3dXdYSkFiRXd8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+          alt=""
+        />
+        <img
+          class="row"
+          src="https://images.unsplash.com/photo-1673863131524-dbe604ab46ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDl8Q0R3dXdYSkFiRXd8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+          alt=""
+        />
+        <img
+          class="row"
+          src="https://images.unsplash.com/photo-1673863131586-6a4303e5920f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8Q0R3dXdYSkFiRXd8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+          alt=""
+        />
+      </section>
+    </div>
+  </body>
+</html>
+<script>
+  let i = 0;
+  let images = [];
+  let time = 2000;
+  images[0] =
+    "https://images.unsplash.com/photo-1674050287685-22af5e6226b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDF8Q0R3dXdYSkFiRXd8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60";
+  images[1] =
+    "https://images.unsplash.com/photo-1674050055855-e840f2c5db31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDV8Q0R3dXdYSkFiRXd8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60";
+  images[2] =
+    "https://images.unsplash.com/photo-1673863131524-dbe604ab46ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDl8Q0R3dXdYSkFiRXd8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60";
+  images[3] =
+    "https://images.unsplash.com/photo-1673863131586-6a4303e5920f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8Q0R3dXdYSkFiRXd8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60";
+
+  function changeimag() {
+    document.slider.src = images[i];
+    if (i < images.length - 1) {
+      i++;
+    } else {
+      i = 0;
+    }
+    setTimeout("changeimag()", time);
+  }
+
+  window.onload = changeimag;
+</script>
